@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h2 class="text-center">Schedule</h2>
+    
+    <div class="jumbotron text-center">Add your tasks for  the day here-: 
+        <form action="{{ url_for('add') }}" method="POST">
+            <input type="text" class="form-control" name="todotask"></br></br>
+            <input type="submit" class="btn btn-lg btn-primary " value="Add Task">
+        </form>
+    </div>
+    <div class="jumbotron">
+        <h2>Incomplete Work</h2>
+        <ul>
+            {% for work in incomplete %}
+            <li ><h3>{{ work.text }} <a href="{{ url_for('complete', id=work.id) }}">Mark As Complete</a></h3></li>
+            {% endfor %}    
+        </ul>
+        <h2>Completed work</h2>
+        <ul>
+            {% for work in complete %}
+            <li ><h3>{{ work.text }}</h3></li>
+        
+            {% endfor %}
+        </ul>
+    </div></div>
+{% endblock %}

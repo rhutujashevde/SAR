@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="jumbotron text-center">
+    <h1>Notes</h1>
+   
+   </br></br>
+    {% if session.logged_in == NULL %}
+  
+    {% endif %}
+
+<div class="container">
+        {% for file_data in files %}
+
+            <a href="{{ url_for('downloadfile', post_id=file_data.id) }}">
+              <h2 class="post-title">
+                {{ file_data.name }}
+              </h2>
+            </a>
+        
+        </br>
+      </br>
+          {% endfor %}
+          
+        </div>
+      </div>
+    </div>
+
+   
+
+        {% if session.logged_in == NULL %}
+  
+    {% endif %}
+  </div>
+{% endblock %}

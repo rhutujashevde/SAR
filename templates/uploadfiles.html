@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="jumbotron text-center">
+ <form method="POST" action="/uploadfile" enctype="multipart/form-data">
+ 	<div class=" form-group">
+ <label for="logged_in"></label>
+<input type="file" name="inputFile" >
+</div>
+<button class="btn btn-lg btn-primary btn-block" type="submit">Upload</button>
+</form>
+</div>
+
+        {% if session.logged_in == NULL %}
+  
+    {% endif %}
+  </div>
+{% endblock %}

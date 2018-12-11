@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block body%}
+ <div class="jumbotron text-center">
+
+<h1>Roll Call</h1>
+
+<form method="POST">
+
+	{% for s in students %}
+	<input type="checkbox" name="{{s.id}}"> {{s.id}} - {{s.name}}
+	<input type="hidden" value="0" name="{{s.id}}">
+
+	<br>
+	{% endfor %}
+	<br>
+	<input type="submit">
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+ <div class="jumbotron text-center">
+<form>
+  <div class="form-group">
+    <label>Feedback:</label>
+    <input type="text" class="form-control" id="feedback">
+  </div>
+    <div class="form-group">
+    <label>Name:</label>
+    <input type="text" class="form-control" id="feedback">
+  </div>
+  
+  <div class="form-group">
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+</div>
+    {% if session.logged_in == NULL %}
+  
+    {% endif %}
+  </div>
+{% endblock %}

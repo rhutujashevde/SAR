@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h2>Blacklist for {{cl.name}}</h2>
+</br>
+<table class="table table-striped table-bordered">
+	<thead class="table-secondary"><tr>
+		<td>Student</td>
+		<td>Subject</td	>
+		<td>Percentage</td>
+	</tr>
+</thead>
+	<tbody>
+	{% for s in b_stud_list %}
+	<tr>
+		<td>{{s[1]}}</td>
+		<td>{{s[0]}}</td>
+		<td>{{s[2]}}</td>
+	</tr>
+	{% endfor %}
+	</tbody>
+</table>
+{% endblock %}

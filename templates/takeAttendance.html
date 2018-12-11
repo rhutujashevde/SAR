@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block body%}
+ <div class="jumbotron text-center">
+<form method="POST">
+	{{form.hidden_tag()}}
+
+	{{form.start_time.label}}
+	{{form.start_time(type="time")}}
+	{% for error in form.start_time.errors %} <br>{{error}} {% endfor %}
+
+	<br>
+	{{form.stop_time.label}}
+	{{form.stop_time(type="time")}}
+	{% for error in form.stop_time.errors %} <br>{{error}} {% endfor %}
+	<br>
+
+	{{form.teacher.label}}
+	{{form.teacher}}
+	{% for error in form.teacher.errors %} <br>{{error}} {% endfor %}
+	<br>
+	{{form.subject.label}}
+	{{form.subject}}
+	{% for error in form.subject.errors %} <br>{{error}} {% endfor %}
+	<br>
+	{{ wtf.form_field(form.submit_btn, button_map={'submit': 'primary'}) }}
+
+</form>
+</div>
+{% endblock %}

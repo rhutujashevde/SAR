@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="jumbotron text-center">
+    <h1>Notices</h1>
+   
+    {% if session.logged_in == NULL %}
+  
+    {% endif %}
+  </div>
+  <div class="jumbotron text-center">
+
+<div class="container">
+        {% for post in posts %}
+          <div class="post-preview">
+            <a href="{{ url_for('postnotice', post_id=post.id) }}">
+              <h2 class="post-title">
+                {{ post.title }}
+              </h2>
+            </a>
+            <p class="post-meta">Posted by {{ post.name }} on {{ post.date_posted.strftime('%B %d, %Y') }}</p>
+          </div>
+        </br>
+      </br>
+          {% endfor %}
+          <hr>
+        </div>
+      </div>
+    </div>
+
+    
+        {% if session.logged_in == NULL %}
+  
+    {% endif %}
+  </div>
+{% endblock %}

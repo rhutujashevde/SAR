@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block body %}
+
+  <div class="jumbotron text-center">
+ <form class="form-signin" method="POST" action="/addteacher">
+        <h2 class="form-signin-heading">Add Teacher Info</h2>
+        {{ form.hidden_tag() }}
+        {{ wtf.form_field(form.name) }}
+        {{ wtf.form_field(form.email) }}
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">SAVE</button>
+      </form>
+  </div>
+
+        {% if session.logged_in == NULL %}
+  
+    {% endif %}
+  </div>
+{% endblock %}

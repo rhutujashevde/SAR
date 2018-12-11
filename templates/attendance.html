@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+   <div class=" text-center container">
+  <h2>CHECK ATTENDANCE</h2>          
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>SUBJECT</th>
+        <th>PRESENT/TOTAL</th>
+        <th>PERCENTAGE</th>
+      </tr>
+    </thead>
+    <tbody>
+  
+          <tr>
+        <td>{{ students.name }}</td>
+        <td>{{ present }}/{{ total }}</td>
+        <td>{{ percentage }}%</td>
+      </tr>    </tbody>
+ 
+  </table>
+</div>
+          
+    {% if session.logged_in == NULL %}
+  
+    {% endif %}
+  </div>
+{% endblock %}

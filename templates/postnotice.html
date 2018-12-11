@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+  <div class="jumbotron text-center">
+  <h1>{{ post.title }}</h1>
+                <h2 class="subheading">{{ post.subtitle }}</h2>
+              <span class="meta">Posted by
+                {{ post.name }}
+                on {{ post.date_posted.strftime('%B %d, %Y') }}</span> 
+   
+    {% if session.logged_in == NULL %}
+  
+    {% endif %}
+  </div>
+  <div class="jumbotron text-center">
+
+
+
+<div class="container">
+            {{ post.content|safe }}</div>
+          </div>
+        </div>
+      
+          
+    {% if session.logged_in == NULL %}
+  
+    {% endif %}
+  </div>
+{% endblock %}

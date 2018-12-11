@@ -1,0 +1,112 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="jumbotron text-center">
+    <h1>Welcome {{ name }}</h1>
+   
+  </div>
+  <div class="jumbotron text-center">
+
+<div class="container">
+
+
+      <div class="card-deck mb-3 text-center">
+
+        <div class="card mb-4 box-shadow">
+         
+          <div class="card-body" class="col-sm-6 col-md-4 col-lg-2">
+            <h1 class="card-title pricing-card-title"><small class="text-muted">Add</small>User</h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>ADD NEW ADMINS AND TEACHERS HERE</li>
+            </ul>
+            <a href="/adduser" class="btn btn-primary my-2">Click here</a>
+          </div></div>
+
+           <div class="card mb-4 box-shadow">
+           <div class="card-body">
+            <h1 class="card-title pricing-card-title"><small class="text-muted">Add</small>Data</h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>ADD NEW CLASS, STUDENTS, SUBJECTS HERE</li>
+            </ul>
+            <a href="http://localhost:1000/admin/" class="btn btn-primary my-2">Click here</a>
+          </div></div>
+           <div class="card mb-4 box-shadow">
+           <div class="card-body">
+            <h1 class="card-title pricing-card-title"><small class="text-muted">Publish</small>Notice</h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>PUBLISH NOTICES</li>
+
+            </ul>
+           <a href="/addnotice" class="btn btn-primary my-2">Click here</a>
+          </div></div>
+             
+
+        </div>
+
+ <div class="card-deck mb-3 text-center">
+
+                     <div class="card mb-4 box-shadow">
+           <div class="card-body">
+            <h1 class="card-title pricing-card-title"><small class="text-muted">Take</small>Attendance</h1>
+            <ul class="list-unstyled mt-3 mb-4">
+<li>TAKE ATTENDANCE HERE</li></br>
+            </ul>
+           <a href="/select-class" class="btn btn-primary my-2">Click here</a>
+          </div></div>
+
+                       <div class="card mb-4 box-shadow">
+           <div class="card-body">
+            <h1 class="card-title pricing-card-title"><small class="text-muted">Create</small>Blacklist</h1>
+            <ul class="list-unstyled mt-3 mb-4">
+<li>CREATE BLACKLIST HERE</li>
+            </ul>
+          <a href="/createblacklist" class="btn btn-primary my-2">Click here</a>
+          </div></div>
+
+                       <div class="card mb-4 box-shadow">
+           <div class="card-body">
+            <h1 class="card-title pricing-card-title"><small class="text-muted">Add</small>Syllabus</h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>UPLOAD SYLLABUS FILE</li>
+
+            </ul>
+           <a href="/uploadsyllabus" class="btn btn-primary my-2">Click here</a>
+          </div></div>
+        </div>
+         <div class="card-deck mb-3 text-center">
+
+                     <div class="card mb-4 box-shadow">
+           <div class="card-body">
+            <h1 class="card-title pricing-card-title"><small class="text-muted">Add</small>Timetable</h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>UPLOAD TIMETALE HERE</li>
+            </ul>
+          <a href="/uploadtt" class="btn btn-primary my-2">Click here</a>
+          </div></div>
+
+                       <div class="card mb-4 box-shadow">
+           <div class="card-body">
+            <h1 class="card-title pricing-card-title"><small class="text-muted">Add</small>Notes</h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>UPLOAD NOTES HERE</li>
+            </ul>
+           <a href="/uploadfile" class="btn btn-primary my-2">Click here</a>
+          </div></div>
+
+                       <div class="card mb-4 box-shadow">
+           <div class="card-body">
+            <h1 class="card-title pricing-card-title"><small class="text-muted">View</small>Report</h1>
+            <ul class="list-unstyled mt-3 mb-4">
+<li>VIEW ATTENDANCE REPORTS </li>
+            </ul>
+            <a href="/createreport" class="btn btn-primary my-2">Click here</a>
+          </div></div>
+        </div>
+      </div>
+</div>
+
+    {% if session.logged_in == NULL %}
+  
+    {% endif %}
+  </div>
+{% endblock %}

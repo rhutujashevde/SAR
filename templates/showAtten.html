@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+{{stud.name}}
+<br>
+{{stud.class_}}
+<div class="table-responsive">
+<table class="table table-striped table-bordered">
+	<thead class="table-secondary"><tr>
+		<td>Subject</td>
+		<td>Present</td>
+		<td>Total</td	>
+		<td>%</td>
+	</tr></thead>
+	{% for s in att_list %}
+	<tr class="{{s[4]}}">
+		<td>{{s[0]}}</td>
+		<td>{{s[1]}}</td>
+		<td>{{s[2]}}</td>
+		<td>{{s[3]}}</td>
+	</tr>
+	{% endfor %}
+</table></div>
+{% endblock %}

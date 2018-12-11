@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body%}
+<div class="text-center">
+<table class="table">
+	<thead><td>Students</td></thead>
+	<tbody>
+{% for student in students%}
+
+<tr><td>	<a href="/showAttendance/{{student.id}}">{{student.id}}-{{student.name}}</a></td></tr><br>
+	{% endfor %}
+</tbody></table>
+</div>
+<br>
+{% endblock %}
