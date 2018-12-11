@@ -1,4 +1,4 @@
-# FSND Item Catalog Project
+# Sophisticated Attendance Record (SAR)
 
 
 ## Introduction
