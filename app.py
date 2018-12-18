@@ -732,4 +732,4 @@ admin.add_view(ModelView(Lecture, db.session))
 
 if __name__ == '__main__':
 	app.jinja_env.auto_reload = True
-	app.run(port=1000,debug=True)
+	app.run(port=8000,debug=True)
