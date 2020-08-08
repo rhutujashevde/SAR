@@ -29,7 +29,7 @@ app.config.update(
     MAIL_PORT=465,
     MAIL_USE_SSL=True,
     MAIL_USERNAME = 'projectSARmail@gmail.com',
-    MAIL_PASSWORD = 'rhutuja1234'
+    MAIL_PASSWORD = '#####'
     )
 
 mail = Mail(app)
